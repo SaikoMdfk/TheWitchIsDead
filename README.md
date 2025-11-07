@@ -8,7 +8,7 @@ El sistema es muy simple y usa solo un dado de diez caras (d10). Las acciones se
 
 El tono del juego mezcla humor negro y fantasía, con una historia breve, improvisada y caótica. No se trata de combatir o ganar, sino de disfrutar una narración creativa y absurda mientras los animales cumplen su venganza.
 
-<img width="300" height="300" alt="logo" src="https://drive.google.com/file/d/161xhPiwJI2E2mTTVO0_xzr3HnD2qn86i/view?usp=drive_link" />
+<img width="300" height="300" alt="logo" src="https://github.com/SaikoMdfk/TheWitchIsDead/blob/main/art/logo.png" />
 
 # The Witch is Dead: Unofficial System for Foundry VTT
 
