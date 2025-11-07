@@ -1,0 +1,118 @@
+<form class="TWID-actor-sheet" autocomplete="off">
+  <div class="sheet-container">
+
+    <header class="sheet-header">
+      <img class="profile-img" src="{{actor.img}}" data-edit="img" title="{{actor.name}}" />
+
+      <div class="char-info">
+
+        <input name="name" type="text" value="{{actor.name}}" placeholder="Nombre del personaje" />
+
+        <select name="system.raza" data-dtype="String">
+          <option value="" {{#unless system.raza}}selected{{/unless}}>Selecciona una raza</option>
+          <option value="zorro" {{#if (eq system.raza "zorro")}}selected{{/if}}>Zorro</option>
+          <option value="gato" {{#if (eq system.raza "gato")}}selected{{/if}}>Gato</option>
+          <option value="sapo" {{#if (eq system.raza "sapo")}}selected{{/if}}>Sapo</option>
+          <option value="araña" {{#if (eq system.raza "araña")}}selected{{/if}}>Araña</option>
+          <option value="búho" {{#if (eq system.raza "búho")}}selected{{/if}}>Búho</option>
+          <option value="liebre" {{#if (eq system.raza "liebre")}}selected{{/if}}>Liebre</option>
+          <option value="carpincho" {{#if (eq system.raza "carpincho")}}selected{{/if}}>Carpincho</option>
+          <option value="cuervo" {{#if (eq system.raza "cuervo")}}selected{{/if}}>Cuervo</option>
+          <option value="perro" {{#if (eq system.raza "perro")}}selected{{/if}}>Perro</option>
+          <option value="rata" {{#if (eq system.raza "rata")}}selected{{/if}}>Rata</option>
+        </select>
+
+        <!-- 🎲 Sección de poderes y raza -->
+        <div class="poder-aleatorio">
+          <!-- Input arriba -->
+          <input
+            type="text"
+            name="system.poderAleatorio"
+            value="{{system.poderAleatorio}}"
+            placeholder="Tu poder aparecerá aquí"
+            readonly
+          />
+
+          <!-- Contenedor de dados y textos -->
+          <div class="dados-container">
+            <!-- Raza -->
+            <div class="raza-aleatoria">
+              <h4>Raza aleatoria:</h4>
+              <img
+                src="systems/TWID/art/1d10.2.png"
+                class="tirar-raza"
+                title="Lanzar raza aleatoria (d10)"
+              />
+            </div>
+
+            <!-- Poder -->
+            <div class="poder-opcion">
+              <h4>Poder aleatorio:</h4>
+              <img
+                src="systems/TWID/art/1d10.png"
+                class="tirar-poder"
+                title="Lanzar poder aleatorio (d10)"
+              />
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </header>
+
+    <div class="stats-row">
+
+      <!-- Atributos a la izquierda -->
+      <section class="attributes">
+        <h2>Atributos</h2>
+        <div class="attr tirar-atributo" data-attr="fuerza">
+          <span class="nombre">Fuerza:</span>
+          <span class="valor">{{system.fuerza}}</span>
+        </div>
+        <div class="attr tirar-atributo" data-attr="agilidad">
+          <span class="nombre">Velocidad:</span>
+          <span class="valor">{{system.agilidad}}</span>
+        </div>
+        <div class="attr tirar-atributo" data-attr="sigilo">
+          <span class="nombre">Sigilo:</span>
+          <span class="valor">{{system.sigilo}}</span>
+        </div>
+        <div class="attr tirar-atributo" data-attr="inteligencia">
+          <span class="nombre">Inteligencia:</span>
+          <span class="valor">{{system.inteligencia}}</span>
+        </div>
+      </section>
+
+      <!-- Columna derecha: Peligro + Magia -->
+      <div class="peligro-magia">
+
+        <section class="peligro">
+          <h2>Puntos de peligro</h2>
+          <div class="dots">
+            <input type="checkbox" name="system.peligro.0" {{#if system.peligro.[0]}}checked{{/if}} />
+            <input type="checkbox" name="system.peligro.1" {{#if system.peligro.[1]}}checked{{/if}} />
+            <input type="checkbox" name="system.peligro.2" {{#if system.peligro.[2]}}checked{{/if}} />
+          </div>
+        </section>
+
+        <div class="magia-row">
+          <span class="magia-text">Magia:</span>
+          <img
+            src="systems/TWID/art/1d10.png"
+            class="tirar-magia"
+            title="Lanzar dado de magia (d10)"
+          />
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <section class="notas">
+      <h2>Notas</h2>
+      <textarea name="system.notas" placeholder="Notas del personaje...">{{system.notas}}</textarea>
+    </section>
+
+  </div>
+</form>

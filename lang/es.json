@@ -1,0 +1,87 @@
+{
+  "TENCANDLES": {
+    "Sheet": {
+      "ActorSheetLabel": "Hoja de Personaje Ten Candles"
+    },
+    "Setting": {
+      "LitCandlesName": "Velas Encendidas",
+      "LitCandlesHint": "El número de velas actualmente encendidas (10 máximo).",
+      "DicePenaltyName": "Penalización de Dados",
+      "DicePenaltyHint": "El número de dados perdidos por sacar 1s."
+    },
+    "Roll": {
+      "NoCandles": "No hay luz para ver. No se pueden hacer tiradas. El juego ha terminado.",
+      "NoDicePenalty": "No quedan dados debido a la oscuridad acumulada. Se debe extinguir una vela para reiniciar la reserva de dados.",
+      "Flavor": "hace una tirada...",
+      "RollingDice1": "Tirando",
+      "RollingDice2": " dados...",      
+      "Success": "¡Éxito!",
+      "Failure": "¡Fallo!",
+      "OnesMessage": "¡Se han sacado unos! La oscuridad se hace más fuerte...",
+      "PenaltyMessage": "Reserva de dados reducida en $1. La próxima tirada usará $2 dados.",
+      "NoDiceReset": "¡No quedan dados! Se debe extinguir una vela para reiniciar la reserva de dados.",
+      "PenaltyText": "Dados retirados",
+      "CandlesText": "Velas"
+    },
+    "ActorSheet": {
+      "CharNamePlaceholder": "Nombre del Personaje",
+      "RollButton": "Hacer una Tirada",
+      "TabMain": "Principal",
+      "TabGear": "Equipo",
+      "Items": "Objetos",
+      "VirtuesLabel": "Virtudes",
+      "VirtuesPlaceholder": "Una virtud...",
+      "VicesLabel": "Vicios",
+      "VicesPlaceholder": "Un vicio...",
+      "BrinksLabel": "Al Borde",
+      "BrinksPlaceholder": "Una memoria...",
+      "TruthsLabel": "Verdades",
+      "TruthsPlaceholder": "¿Qué verdades ha establecido el personaje...",
+      "NoGear": "No hay objetos de equipo. Arrastra objetos de equipo desde el directorio de Objetos para agregarlos.",
+      "CreateGear": "Crear Equipo",
+      "NewGearName": "Nuevo Equipo"
+    },
+    "Items": {
+      "Virtue": "Virtud",
+      "Vice": "Vicio",
+      "Brink": "Al Borde",
+      "Gear": "Equipo",
+      "Name": "Nombre",
+      "Type": "Tipo",
+      "Description": "Descripción",
+      "DescriptionPlaceholder": "Describe este objeto...",
+      "Quantity": "Cantidad",
+      "Weight": "Peso",
+      "Total": "Total",
+      "DeleteConfirmTitle": "Eliminar Objeto",
+      "DeleteConfirmMessage": "¿Estás seguro de que quieres eliminar {name}?",
+      "InvalidType": "Este tipo de objeto no es válido para personajes de Ten Candles.",
+      "AddedToList": "{itemName} ha sido agregado a la lista de {listType}.",
+      "CreateFailed": "No se pudo crear el objeto."
+    },
+    "Warnings": {
+      "SingleItemExists": "Ya existe una {itemType} para este personaje"
+    },
+    "GM": {
+      "TrackerTitle": "Rastreador de Velas",
+      "NarratorAlias": "El Narrador",
+      "LitCandles": "Velas Encendidas",
+      "CandleTitle": "Vela {{count}}",
+      "ExtinguishButton": "Extinguir una Vela",
+      "CandlesRemain": "Quedan {{count}} velas.",
+      "DicePenaltyDisplay": "Penalización de dados:",
+      "AvailableDice": " dados disponibles para tiradas",
+      "LightGone": "La luz se ha ido.",
+      "ExtinguishMessageBase": "Se ha extinguido una vela. Quedan {{count}}. La oscuridad crece.",
+      "ExtinguishMessageReset": "La reserva de dados se reinicia a {{count}} dados.",
+      "ExtinguishMessageZero": "No queda luz. La oscuridad lo ha consumido todo.",
+      "LightMessage": "Se han encendido velas. Ahora quedan {{count}}.",
+      "CandleOut1": "Una vela se ha apagado, aun quedan ",
+      "CandleOut2": "La oscuridad crece.",
+      "Mreserva1": "La reserva de dados se reinicia a",
+      "Mreserva2": "Ya no queda luz. la oscuridad lo consume todo.",
+      "Mvelaencendida1": "Se ha encendido una vela, quedan ahora ",
+      "Mvelaencendida2": " vela(s)."
+    }
+  }
+}

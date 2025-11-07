@@ -1,0 +1,38 @@
+{
+  "id": "TWID",
+  "title": "The Witch is Dead",
+  "description": "An Unofficial system for the The Witch is Dead an rpg about murderer.",
+  "version": "0.1.0",
+  "compatibility": {
+    "minimum": "13",
+    "verified": "13"
+  },
+  "authors": [
+      {
+      "name": "Saiko"
+      }
+  ],
+  "languages": [
+    {
+      "lang": "en",
+      "name": "English",
+      "path": "lang/en.json"
+    },
+    {
+      "lang": "es",
+      "name": "Español",
+      "path": "lang/es.json"
+    }
+  ],
+  "esmodules": [
+    "module/TWID.js",
+    "module/pause-customizer.js"
+  ],
+  "styles": [
+    "css/TWID.css",
+    "css/pause-customizer.css"
+  ],
+  "packs": [],
+  "socket": true,
+  "background": "systems/TWID/art/banner.jpeg"
+}

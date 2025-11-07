@@ -1,0 +1,38 @@
+/* Logo de Pausa Cambiado y Titilante*/
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
+
+img.fa-spin {
+    width: 200px; /* Ajusta el tamaño */
+    height: 200px;
+    animation: pulsate 3s infinite ease-in-out, none !important; /* Añade el parpadeo */
+    opacity: 1; /* Transparencia inicial */
+  }
+  
+  @keyframes pulsate {
+    0% {
+        filter: drop-shadow(0 0 0 rgba(255, 255, 255, 0));
+    }
+    50% {
+        filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.5));
+    }
+    100% {
+        filter: drop-shadow(0 0 0 rgba(255, 255, 255, 0));
+    }
+  }
+  
+  #pause figcaption {
+    color: var(--color-text-light-0);
+    font-size: 30px;
+    text-shadow: 2px 2px 2px var(--color-shadow-dark);
+    font-family: "Libre Baskerville", serif;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: 2px;
+    padding: 0;
+    margin: 0;
+  }
+  
+  #pause {
+    background: none !important;
+
+  }

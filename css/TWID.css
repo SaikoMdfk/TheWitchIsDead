@@ -1,0 +1,290 @@
+.TWID-actor-sheet {
+  background-color: #000;
+  color: #eee;
+  font-family: 'Crimson Text', serif;
+  padding: 20px;
+}
+
+.sheet-container {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.sheet-header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  border-bottom: 1px solid #444;
+  padding-bottom: 10px;
+}
+
+.profile-img {
+  width: 200px;
+  height: 200px;
+  border-radius: 10px;
+  border: 2px solid #555;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.char-info input {
+  background: transparent;
+  color: #fff;
+  border: none;
+  border-bottom: 2px solid #666;
+  font-size: 1.5em;
+  margin: 15px;
+  width: 320px;
+  text-align: center;
+}
+
+.char-info select[name="system.raza"] {
+  background: transparent;
+  width: 320px;   
+  color: #fff;
+  border: 2px solid #666;
+  font-size: 1.5em;
+  margin: 15px;
+  padding: 1px 1px;      
+  border-radius: 6px;     
+  box-sizing: content-box; 
+}
+
+select[name="system.raza"] option {
+  background-color: #111;  
+  color: #fff;             
+}
+
+/* Contenedor general del bloque de poder */
+.poder-aleatorio {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+/* Input del poder */
+.poder-aleatorio input {
+  width: 320px;
+  box-sizing: border-box;
+}
+
+/* Contenedor de las dos líneas de texto + dados */
+.dados-container {
+  display: flex;
+  flex-direction: row;
+  width: 320px;
+  justify-content: space-between;
+}
+
+/* Cada grupo (raza o poder) */
+.raza-aleatoria,
+.poder-opcion {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* Dados (imágenes) */
+.tirar-poder,
+.tirar-raza {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  cursor: pointer;
+  flex: 0 0 auto;
+  transition: transform 0.15s ease, filter 0.15s ease;
+}
+
+/* Hover y click */
+.tirar-poder:hover,
+.tirar-raza:hover {
+  transform: scale(1.1);
+}
+
+.tirar-poder:active,
+.tirar-raza:active {
+  transform: scale(0.95);
+}
+
+/* ------------------------------------------------------
+   Sección de atributos
+------------------------------------------------------ */
+.attributes {
+  flex: 0 0 50%;  /* ancho reducido a ~45% */
+  background: #111;
+  padding: 15px;
+  border-radius: 8px;
+  border: 2px solid #333;
+}
+
+.attributes .attr {
+  display: flex;              
+  justify-content: space-between; 
+  align-items: center;       
+  padding: 4px 0;            
+  border-bottom: 1px solid #222; 
+  cursor: pointer;           
+  transition: transform 0.2s, color 0.2s; 
+}
+
+.attributes .attr:hover {
+  transform: scale(1.05);
+  color: #FFA500;
+}
+
+.attributes .attr:last-child {
+  border-bottom: none;
+}
+
+.attributes .attr .valor {
+  min-width: 30px;
+  text-align: right;
+  font-weight: bold;
+}
+
+/* ------------------------------------------------------
+   Fila de stats: atributos + peligro/magia
+------------------------------------------------------ */
+.stats-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+/* Sección de Peligro + Magia */
+.peligro-magia {
+  flex: 1;                     /* ocupa el resto del espacio */
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.peligro {
+  background: #111;
+  padding: 15px;
+  border-radius: 8px;
+  border: 2px solid #333;
+}
+
+.peligro h2,
+.peligro,
+.notas h2 {
+  background-color: #111;
+  color: #fff;
+  padding: 5px;
+  border-radius: 8px;
+  border: 1px solid #333;
+  text-align: center;
+
+  font-family: 'Crimson Text', serif; /* fuente elegante y clásica */
+  font-weight: 600;             /* un poco más gruesa */
+  font-size: 1.2em;             /* ligeramente más grande */
+}
+
+.peligro .dots input[type="checkbox"] {
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  margin: 10px;
+  border: 2px solid #666;
+  border-radius: 5px;
+  background-color: #111;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.peligro .dots input[type="checkbox"]:checked::after {
+  content: "✖";
+  color: red;
+  font-size: 20px;
+  position: absolute;
+  top: 58%;
+  left: 58%;
+  transform: translate(-50%, -58%);
+}
+
+.peligro .dots input[type="checkbox"]:hover {
+  border-color: red;
+}
+
+/* ------------------------------------------------------
+   Atributos internos (labels y inputs)
+------------------------------------------------------ */
+.attr {
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 5px;
+}
+
+.attr label {
+  width: 50%;
+}
+
+.attr input {
+  width: 40px;
+  background: #222;
+  color: #fff;
+  border: 1px solid #555;
+}
+
+.dots input[type="checkbox"] {
+  transform: scale(1.5);
+  margin-right: 10px;
+}
+
+/* ------------------------------------------------------
+   Notas
+------------------------------------------------------ */
+.notas textarea {
+  margin-top: 2px;
+  height: 100px;
+  resize: none;
+}
+
+.notas h2 {
+  margin-top: 10px;
+}
+
+textarea {
+  width: 100%;
+  min-height: 80px;
+  background: #222;
+  color: #eee;
+  border: 1px solid #555;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+/* ------------------------------------------------------
+   Magia
+------------------------------------------------------ */
+.magia-row {
+  display: flex;
+  align-items: center;       /* centra verticalmente */
+  justify-content: center;   /* centra horizontalmente dentro del espacio */
+  gap: 12px;                 /* separa texto e imagen */
+  margin-top: 10px;
+}
+
+.magia-row .magia-text {
+  font-size: 1.5em;
+  font-weight: 700;          /* más gruesa */
+  color: #fff;
+  font-family: 'Crimson Text', serif;  /* más moderna y legible */
+}
+
+.magia-row img {
+  width: 40px;               /* dado un poco más grande */
+  height: 40px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.magia-row img:hover {
+  transform: scale(1.1);
+}

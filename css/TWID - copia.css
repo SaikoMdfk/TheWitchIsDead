@@ -1,0 +1,263 @@
+.TWID-actor-sheet {
+  background-color: #000;
+  color: #eee;
+  font-family: 'Crimson Text', serif;
+  padding: 20px;
+}
+
+.sheet-container {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.sheet-header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  border-bottom: 1px solid #444;
+  padding-bottom: 10px;
+}
+
+.profile-img {
+  width: 200px;
+  height: 200px;
+  border-radius: 10px;
+  border: 2px solid #555;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.char-info input {
+  background: transparent;
+  color: #fff;
+  border: none;
+  border-bottom: 2px solid #666;
+  font-size: 1.5em;
+  margin: 15px;
+  width: 320px;
+  text-align: center;
+}
+
+.char-info select[name="system.raza"] {
+  background: transparent;
+  width: 320px;   
+  color: #fff;
+  border: 2px solid #666;
+  font-size: 1.5em;
+  margin: 15px;
+  padding: 1px 1px;      
+  border-radius: 6px;     
+  box-sizing: content-box; 
+}
+
+select[name="system.raza"] option {
+  background-color: #111;  
+  color: #fff;             
+}
+
+
+/* Contenedor general del bloque */
+.poder-aleatorio {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px; /* separación entre input y los dados */
+}
+
+/* Input del poder */
+.poder-aleatorio input {
+  width: 320px;
+  box-sizing: border-box;
+}
+
+/* Contenedor de las dos líneas de texto + dados */
+.dados-container {
+  display: flex;
+  flex-direction: row;
+  width: 320px;
+  justify-content: space-between;
+}
+
+/* Cada grupo (raza o poder) */
+.raza-aleatoria,
+.poder-opcion {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* Dados (imágenes) */
+.tirar-poder,
+.tirar-raza {
+  width: 40px;           /* 👈 ajusta este valor a gusto (10–20px es pequeño) */
+  height: 40px;
+  object-fit: contain;   /* evita que se deformen */
+  cursor: pointer;
+  flex: 0 0 auto;        /* evita que se estiren */
+  transition: transform 0.15s ease, filter 0.15s ease;
+}
+
+/* Hover y click */
+.tirar-poder:hover,
+.tirar-raza:hover {
+  transform: scale(1.1);
+}
+
+.tirar-poder:active,
+.tirar-raza:active {
+  transform: scale(0.95);
+}
+
+.attributes {
+  flex: 0 0 250px;  /* ocupa un ancho fijo de 250px */
+  background: #111;
+  padding: 15px;
+  border-radius: 8px;
+  border: 2px solid #333;
+}
+
+
+.attributes .attr {
+  display: flex;              
+  justify-content: space-between; 
+  align-items: center;       
+  padding: 4px 0;            
+  border-bottom: 1px solid #222; 
+  cursor: pointer;           /* indica que es clickeable */
+  transition: transform 0.2s, color 0.2s; /* animación suave */
+}
+
+.attributes .attr:hover {
+  transform: scale(1.05);       /* agranda un poquito */
+  color: #FFA500;               /* tono anaranjado */
+}
+
+.attributes .attr:last-child {
+  border-bottom: none;       /* quita la línea del último */
+}
+
+.attributes .attr .valor {
+  min-width: 30px;           /* que los números tengan un ancho mínimo igualado */
+  text-align: right;         /* alineación del valor a la derecha */
+  font-weight: bold;
+}
+
+.stats-row {
+  display: flex;              /* 🔹 coloca los hijos en una fila */
+  justify-content: space-around; /* 🔹 separa las dos secciones */
+  align-items: flex-start;    /* 🔹 alinea la parte superior */
+  gap: 40px;                  /* 🔹 espacio entre atributos y peligro */
+  margin-top: 20px;
+}
+
+.attributes, .peligro {
+  flex: 1;                    /* 🔹 que ambas ocupen espacio similar */
+  background: #111;
+  padding: 15px;
+  border-radius: 8px;
+  border: 2px solid #333;
+}
+
+.attributes h2,
+.peligro h2,
+.peligro,
+.notas h2 {
+  background-color: #111;
+  color: #fff;
+  padding: 5px;
+  border-radius: 8px;
+  border: 1px solid #333;
+  text-align: center;
+}
+
+.peligro .dots input[type="checkbox"] {
+  appearance: none;          /* elimina el estilo por defecto del navegador */
+  width: 25px;
+  height: 25px;
+  margin: 5px;
+  border: 2px solid #666;
+  border-radius: 5px;
+  background-color: #111;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin: 10px;
+}
+
+.peligro .dots input[type="checkbox"]:checked::after {
+  content: "✖";              /* muestra una cruz */
+  color: red;                /* color de la cruz */
+  font-size: 20px;
+  position: absolute;
+  top: 58%;
+  left: 58%;
+  transform: translate(-50%, -58%);
+
+
+}
+
+.peligro .dots input[type="checkbox"]:hover {
+  border-color: red;         /* resalta al pasar el cursor */
+}
+
+
+.attr {
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 5px;
+}
+
+.attr label {
+  width: 50%;
+}
+
+.attr input {
+  width: 40px;
+  background: #222;
+  color: #fff;
+  border: 1px solid #555;
+}
+
+.dots input[type="checkbox"] {
+  transform: scale(1.5);
+  margin-right: 10px;
+}
+
+.notas textarea{
+  margin-top: 2px;
+  height: 100px;
+  resize: none;
+}
+
+.notas h2{
+  margin-top: 10px;
+}
+
+textarea {
+  width: 100%;
+  min-height: 80px;
+  background: #222;
+  color: #eee;
+  border: 1px solid #555;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.magia-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.magia-row img {
+  width: 32px;
+  height: 32px;
+  cursor: pointer;           /* solo la imagen es clickeable */
+  transition: transform 0.2s;
+}
+
+.magia-row img:hover {
+  transform: scale(1.1);     /* efecto de hover solo en la imagen */
+}

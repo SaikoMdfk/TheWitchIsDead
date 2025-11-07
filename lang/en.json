@@ -1,0 +1,88 @@
+{
+  "TENCANDLES": {
+    "Sheet": {
+      "ActorSheetLabel": "Ten Candles Character Sheet"
+    },
+    "Setting": {
+      "LitCandlesName": "Lit Candles",
+      "LitCandlesHint": "The number of currently lit candles (10 maximum).",
+      "DicePenaltyName": "Dice Penalty",
+      "DicePenaltyHint": "The number of dice lost due to rolling 1s."
+    },
+    "Roll": {
+      "NoCandles": "There is no light to see by. No rolls can be made. The game is over.",
+      "NoDicePenalty": "No dice remain due to the accumulated darkness. A candle must be extinguished to reset the dice pool.",
+      "Flavor": "makes a roll...",
+      "RollingDice1": "Rolling",
+      "RollingDice2": " dice...",
+      "Success": "Success!",
+      "Failure": "Failure!",
+      "OnesMessage": "Rolled ones! The darkness grows stronger...",
+      "PenaltyMessage": "Dice pool reduced by $1. Next roll will use $2 dice.",
+      "NoDiceReset": "No dice remain! A candle must be extinguished to reset the dice pool.",
+      "PenaltyText": "Excluded dices",
+      "CandlesText": "Candles"
+    },
+    "ActorSheet": {
+      "CharNamePlaceholder": "Character Name",
+      "RollButton": "Make a Roll",
+      "TabMain": "Main",
+      "TabGear": "Gear",
+      "Items": "Items",
+      "VirtuesLabel": "Virtues",
+      "VirtuesPlaceholder": "A virtue...",
+      "VicesLabel": "Vices",
+      "VicesPlaceholder": "A vice...",
+      "BrinksLabel": "Brinks",
+      "BrinksPlaceholder": "A brink...",
+      "TruthsLabel": "Truths",
+      "TruthsPlaceholder": "What truths has the character established...",
+      "NoGear": "No gear items. Drag gear items from the Items directory to add them.",
+      "CreateGear": "Create Gear",
+      "NewGearName": "New Gear"
+    },
+    "Items": {
+      "Virtue": "Virtue",
+      "Vice": "Vice",
+      "Brink": "Brink",
+      "Gear": "Gear",
+      "Name": "Name",
+      "Type": "Type",
+      "Description": "Description",
+      "DescriptionPlaceholder": "Describe this item...",
+      "Quantity": "Quantity",
+      "Weight": "Weight",
+      "Total": "Total",
+      "DeleteConfirmTitle": "Delete Item",
+      "DeleteConfirmMessage": "Are you sure you want to delete {name}?",
+      "InvalidType": "This item type is not valid for Ten Candles characters.",
+      "AddedToList": "{itemName} has been added to the {listType} list.",
+      "CreateFailed": "Could not create the item."
+    },
+    "Warnings": {
+      "SingleItemExists": "A {itemType} already exists for this character"
+    },
+    "GM": {
+      "TrackerTitle": "Candle Tracker",
+      "NarratorAlias": "The Narrator",
+      "LitCandles": "Lit Candles",
+      "CandleTitle": "Candle ",
+      "ExtinguishButton": "Extinguish a Candle",
+      "CandlesRemain": " candles remain.",
+      "DicePenaltyDisplay": "Dice penalty:",
+      "AvailableDice": " dice available for rolls",
+      "LightGone": "The light is gone.",
+      "ExtinguishMessageBase": "A candle has been extinguished. {{count}} remain. The darkness grows.",
+      "ExtinguishMessageReset": "The dice pool is reset to {{count}} dice.",
+      "ExtinguishMessageZero": "No light remains. The darkness has consumed everything.",
+      "LightMessage": "Candles have been lit. {{count}} now remain.",
+      "CandleOut1": "One candle has gone out, there are still ",
+      "CandleOut2": "The darkness grows.",
+      "CandleOut3": "Candle 3 is out.",
+      "Mreserva1": "The dice pool is reset to",
+      "Mreserva2": "No light remains. The darkness consumes everything.",
+      "Mvelaencendida1": "A candle has been lit, there are now ",
+      "Mvelaencendida2": " candles."
+    }
+  }
+}
