@@ -1,10 +1,12 @@
+import { SoundSystem } from "./SoundSys.js";
+
 export class TWIDActorSheet extends ActorSheet {
   static get defaultOptions() {
     return foundry.utils.mergeObject(super.defaultOptions, {
       classes: ["TWID", "sheet", "actor"],
       template: "systems/TWID/templates/actor/actor-sheet.html",
       width: 650,
-      height: 700,
+      height: 705,
       resizable: false
     });
   }
@@ -90,7 +92,7 @@ export class TWIDActorSheet extends ActorSheet {
 
         ChatMessage.create({
           speaker: ChatMessage.getSpeaker({ actor: this.actor }),
-          content: `<b>Tu poder es:</b> ${poderElegido}`
+          content:`<div class="poder-revelado"><b>Tu poder es:</b> ${poderElegido}</div>`
         });
 
         this.render(false);
@@ -149,12 +151,13 @@ export class TWIDActorSheet extends ActorSheet {
 
         ChatMessage.create({
           speaker: ChatMessage.getSpeaker({ actor: this.actor }),
-          content: `<b>Tu raza es:</b> ${razaElegida}`
+          content: `<div class="raza-revelada"><b>Tu raza es:</b> ${razaElegida}</div>`
         });
 
         this.render(false);
       });
     });
+
 
     // 🎲 Tiradas de atributos al presionar el nombre
     html.on("click", ".tirar-atributo", async ev => {
@@ -174,6 +177,9 @@ export class TWIDActorSheet extends ActorSheet {
         flavor: `Tirada de <b>${key}</b>`,
         rollMode: "roll" // Asegura que sea una tirada normal
       });
+
+      // 🔊 Reproducir sonido del personaje si existe
+      SoundSystem.playActorSound(this.actor);
     });
 
     html.on("click", ".tirar-magia", async ev => {
@@ -192,6 +198,8 @@ export class TWIDActorSheet extends ActorSheet {
       });
     });
 
+    // 🎙️ Sistema de grabación y reproducción de voz
+    SoundSystem.activateListeners(html, this.actor);
   }
 }
 
@@ -199,4 +207,31 @@ Hooks.once("init", function() {
   console.log("TWID | Iniciando sistema The Witch is Dead");
   Actors.unregisterSheet("core", ActorSheet);
   Actors.registerSheet("TWID", TWIDActorSheet, { makeDefault: true });
+
+  // Inicializar el listener del socket para el audio
+  SoundSystem.initializeSocketListener();
+
+// en module/TWID.js o tu JS principal
+Hooks.once('ready', () => {
+  // Cargar CSS del chat
+  const link = document.createElement('link');
+  link.rel = 'stylesheet';
+  link.href = 'systems/TWID/css/chat-message.css';
+  document.head.appendChild(link);
+});
+
+Hooks.on("renderChatMessage", (message, html, data) => {
+
+  const diceTotal = html.find(".dice-total");
+
+  diceTotal.on("click", function () {
+
+    const roll = $(this).closest(".dice-roll");
+
+    roll.toggleClass("show-formula");
+
+  });
+
+});
+
 });

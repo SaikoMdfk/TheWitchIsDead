@@ -30,12 +30,10 @@
   ],
   "styles": [
     "css/TWID.css",
-    "css/pause-customizer.css"
+    "css/pause-customizer.css",
+    "css/chat-message.css"
   ],
   "packs": [],
   "socket": true,
-  "url": "https://github.com/SaikoMdfk/TheWitchIsDead",
-  "manifest": "https://raw.githubusercontent.com/SaikoMdfk/TheWitchIsDead/refs/heads/main/system.json",
-  "download": "https://github.com/SaikoMdfk/TheWitchIsDead/archive/refs/tags/V1-0.zip",
   "background": "systems/TWID/art/banner.jpeg"
 }

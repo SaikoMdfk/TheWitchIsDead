@@ -5,7 +5,6 @@
       <img class="profile-img" src="{{actor.img}}" data-edit="img" title="{{actor.name}}" />
 
       <div class="char-info">
-
         <input name="name" type="text" value="{{actor.name}}" placeholder="Nombre del personaje" />
 
         <select name="system.raza" data-dtype="String">
@@ -61,7 +60,6 @@
     </header>
 
     <div class="stats-row">
-
       <!-- Atributos a la izquierda -->
       <section class="attributes">
         <h2>Atributos</h2>
@@ -69,7 +67,7 @@
           <span class="nombre">Fuerza:</span>
           <span class="valor">{{system.fuerza}}</span>
         </div>
-        <div class="attr tirar-atributo" data-attr="agilidad">
+        <div class="attr tirar-atributo" data-attr="Velocidad">
           <span class="nombre">Velocidad:</span>
           <span class="valor">{{system.agilidad}}</span>
         </div>
@@ -105,13 +103,28 @@
         </div>
 
       </div>
-
     </div>
-
 
     <section class="notas">
       <h2>Notas</h2>
       <textarea name="system.notas" placeholder="Notas del personaje...">{{system.notas}}</textarea>
+    </section>
+
+    <section class="voice-controls">
+      <a class="record-voice" title="Grabar y enviar voz (4s)">
+        <i class="fas fa-microphone"></i>
+      </a>
+      <a class="play-local-voice" title="Reproducir grabación" style="display: none;">
+        <i class="fas fa-play"></i>
+      </a>
+      <a class="delete-voice" title="Borrar grabación" style="display: none;">
+        <i class="fas fa-trash"></i>
+      </a>
+
+      <!-- Botón permanente de configuración -->
+      <a class="settings-voice" title="Configuración de micrófono">
+        <i class="fas fa-cog"></i>
+      </a>
     </section>
 
   </div>

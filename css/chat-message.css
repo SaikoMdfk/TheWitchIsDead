@@ -1,0 +1,250 @@
+/* ===== FUENTE GOTICA ===== */
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@600&family=UnifrakturCook:wght@700&display=swap');
+
+
+/* ===== MENSAJE DE CHAT ===== */
+
+.chat-message {
+
+  background: #2a2a2a;
+
+  border: 2px solid #5a0000;
+  border-left: 3px solid #5a0000;   /* linea roja sutil */
+
+  border-radius: 6px;
+
+  padding: 8px;
+  margin: 4px 2px;
+
+  color: #d0d0d0;
+
+  box-shadow:
+    0 2px 6px rgba(0,0,0,0.6),
+    inset 0 0 6px rgba(0,0,0,0.6);
+}
+
+
+/* ===== ENCABEZADO DEL MENSAJE ===== */
+
+.chat-message .message-header {
+  font-family: 'Cinzel', serif;
+  letter-spacing: 1px;
+  color: #ffffff;
+}
+
+
+/* ===== NOMBRE DEL JUGADOR ===== */
+
+.chat-message .message-sender {
+
+  display: inline-block;
+  width: fit-content;
+  flex: 0;
+
+  border-bottom: 2px solid #8b0000;
+
+  padding-bottom: 2px;
+  padding-right: 8px;
+}
+
+
+/* ===== TITULO DE LA TIRADA ===== */
+
+.chat-message .flavor-text {
+
+  color: #ffffff;
+  font-family: 'Cinzel', serif;
+  letter-spacing: 1px;
+
+  text-align: center;
+
+  margin-top: 5px;
+  margin-bottom: 4px;
+}
+
+
+/* ===== OCULTAR FORMULA ===== */
+
+.dice-formula,
+.dice-tooltip,
+.dice-roll .dice-tooltip {
+  display: none !important;
+}
+
+
+/* ===== CONTENEDOR DEL RESULTADO ===== */
+
+.dice-roll {
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+/* ===== RESULTADO DEL DADO ===== */
+
+.dice-total {
+
+  position: relative;
+
+  width: 70px;
+  height: 70px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin: 8px auto;
+
+  font-size: 36px;
+  font-family: 'UnifrakturCook', serif;
+  color: #ffffff;
+
+  background: radial-gradient(circle, #3a3a3a 0%, #1a1a1a 70%);
+
+  border: 2px solid #444;
+  border-radius: 10px;
+
+  box-shadow:
+    0 0 8px rgba(0,0,0,0.8),
+    inset 0 0 10px rgba(0,0,0,0.9);
+
+  transition: all 0.2s ease;
+
+  animation: diceAppear 0.25s ease-out;
+}
+
+
+/* ===== SIMBOLOS ARCANOS EN ESQUINAS ===== */
+
+.dice-total::before {
+
+  content: "✦";
+
+  position: absolute;
+
+  top: -10px;
+  left: -10px;
+
+  font-size: 16px;
+  color: rgba(255,255,255,0.35);
+}
+
+.dice-total::after {
+
+  content: "✦";
+
+  position: absolute;
+
+  bottom: -10px;
+  right: -10px;
+
+  font-size: 16px;
+  color: rgba(255,255,255,0.35);
+}
+
+
+/* ===== EFECTO HOVER ===== */
+
+.dice-total:hover {
+
+  border-color: #888;
+
+  box-shadow:
+    0 0 10px rgba(255,255,255,0.15),
+    inset 0 0 12px rgba(0,0,0,0.9);
+
+  transform: scale(1.05);
+}
+
+
+/* ===== ANIMACION DE APARICION ===== */
+
+@keyframes diceAppear {
+
+  from {
+    transform: scale(0.6);
+    opacity: 0;
+  }
+
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+}
+
+
+/* ===== FORMULA DEL DADO AL MOSTRARSE ===== */
+
+.show-formula .dice-formula {
+
+  display: block !important;
+  width: 70%;
+
+  margin: 8px auto 0 auto;
+
+  text-align: center;
+
+  font-family: 'Cinzel', serif;
+  font-size: 14px;
+  color: #bbbbbb;
+  letter-spacing: 1px;
+}
+
+.show-formula .dice-tooltip {
+
+  display: block !important;
+
+  width: 70%;
+  margin: 0 auto;
+}
+
+.show-formula .dice-result {
+  width: 100%;
+}
+
+
+/* =========================================
+   REVELACION DE RAZA / PODER
+========================================= */
+
+.poder-revelado,
+.raza-revelada{
+
+  text-align:center;
+
+  font-family:'Cinzel',serif;
+
+  font-size:19px;
+
+  letter-spacing:1px;
+
+  padding:8px 6px;
+
+  margin:6px 0;
+
+  color:#e6e6e6;
+
+  border-top:1px solid #3a3a3a;
+  border-bottom:1px solid #3a3a3a;
+
+  background:
+    linear-gradient(transparent,rgba(0,0,0,0.35),transparent);
+}
+
+
+
+/* palabra clave */
+
+.poder-revelado b,
+.raza-revelada b{
+
+  color:#c00000;
+
+  font-weight:600;
+
+  margin-right:4px;
+}
