@@ -8,9 +8,7 @@ El sistema es muy simple y usa solo un dado de diez caras (d10). Las acciones se
 
 El tono del juego mezcla humor negro y fantasía, con una historia breve, improvisada y caótica. No se trata de combatir o ganar, sino de disfrutar una narración creativa y absurda mientras los animales cumplen su venganza.
 
-Importante: Para mejor funcionamiento el sistema debe ser utilizado con los modulos "Dice Tray" y "Dice so Nice".
-
-<img width="300" height="300" alt="logo" src="https://drive.google.com/file/d/161xhPiwJI2E2mTTVO0_xzr3HnD2qn86i/view?usp=drive_link" />
+<img width="300" height="300" alt="logo" src="https://github.com/SaikoMdfk/TheWitchIsDead/blob/main/art/logo.png" />
 
 # The Witch is Dead: Unofficial System for Foundry VTT
 
@@ -19,9 +17,5 @@ The Witch is Dead is a short role-playing game created by Grant Howitt, designed
 The system is very simple and uses only a ten-sided die (d10). Actions are resolved by rolling the die: on a 6 or higher the character succeeds, and on a lower result they fail. Each animal has a small magical ability and a natural skill that can help with certain rolls.
 
 The tone of the game mixes dark humor and fantasy, with a brief, improvised, and chaotic story. It’s not about fighting or winning, but about enjoying a creative and absurd narrative as the animals carry out their revenge.
-
-Important: For best performance, the system must be used with the "Dice Tray" and "Dice so Nice" modules.
-
-<img width="300" height="300" alt="logo" src="https://drive.google.com/file/d/161xhPiwJI2E2mTTVO0_xzr3HnD2qn86i/view?usp=drive_link" />
 
 </div>
